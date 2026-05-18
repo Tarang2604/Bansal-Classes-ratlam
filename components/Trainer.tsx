@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Star, Quote, GraduationCap, Globe, Award, Mic2, BookOpen } from "lucide-react";
 import { slideInLeft, slideInRight, fadeInUp, staggerContainer, staggerItem, viewportConfig } from "@/lib/animations";
 
@@ -34,45 +35,15 @@ export default function Trainer() {
           <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={viewportConfig} className="relative">
             <div className="relative mx-auto max-w-sm">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-blue-100 dark:border-blue-900">
-                <div className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 aspect-[4/5] flex flex-col items-center justify-end relative overflow-hidden">
-                  <svg viewBox="0 0 300 400" className="absolute inset-0 w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Abhishek Bansal — Founder & Trainer">
-                    <defs>
-                      <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#3730a3" /><stop offset="100%" stopColor="#6d28d9" /></linearGradient>
-                      <linearGradient id="shirtG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#7c3aed" /><stop offset="100%" stopColor="#5b21b6" /></linearGradient>
-                    </defs>
-                    <rect width="300" height="400" fill="url(#bgG)" />
-                    <circle cx="50" cy="50" r="60" fill="rgba(255,255,255,0.05)" />
-                    <circle cx="260" cy="330" r="80" fill="rgba(255,255,255,0.04)" />
-                    <path d="M75 315 Q100 260 150 245 Q200 260 225 315 L245 400 H55 Z" fill="url(#shirtG)" />
-                    <path d="M128 248 L150 272 L172 248" stroke="rgba(255,255,255,0.45)" strokeWidth="2" fill="none" />
-                    <path d="M75 315 Q55 345 50 385 H78 Q82 360 95 328" fill="url(#shirtG)" />
-                    <path d="M225 315 Q245 345 250 385 H222 Q218 360 205 328" fill="url(#shirtG)" />
-                    <ellipse cx="58" cy="383" rx="13" ry="9" fill="#c8956c" />
-                    <ellipse cx="242" cy="383" rx="13" ry="9" fill="#c8956c" />
-                    <rect x="136" y="222" width="28" height="28" rx="8" fill="#c8956c" />
-                    <ellipse cx="150" cy="188" rx="52" ry="58" fill="#c8956c" />
-                    <path d="M98 175 Q102 112 150 108 Q198 112 202 175 Q190 138 150 133 Q110 138 98 175 Z" fill="#111" />
-                    <path d="M98 175 Q91 158 95 146 Q103 138 109 154 Z" fill="#111" />
-                    <path d="M202 175 Q209 158 205 146 Q197 138 191 154 Z" fill="#111" />
-                    <path d="M118 168 Q130 161 142 167" stroke="#111" strokeWidth="3" strokeLinecap="round" fill="none" />
-                    <path d="M158 167 Q170 161 182 168" stroke="#111" strokeWidth="3" strokeLinecap="round" fill="none" />
-                    <ellipse cx="130" cy="182" rx="9" ry="9" fill="white" />
-                    <ellipse cx="170" cy="182" rx="9" ry="9" fill="white" />
-                    <circle cx="131" cy="183" r="5.5" fill="#2a1200" />
-                    <circle cx="171" cy="183" r="5.5" fill="#2a1200" />
-                    <circle cx="133" cy="181" r="1.5" fill="white" />
-                    <circle cx="173" cy="181" r="1.5" fill="white" />
-                    <path d="M148 186 Q150 202 152 186" stroke="#a0613a" strokeWidth="1.5" fill="none" />
-                    <path d="M142 206 Q150 212 158 206" stroke="#8b4513" strokeWidth="1.5" fill="none" />
-                    <path d="M133 218 Q150 232 167 218" stroke="#6b2d0a" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                    <ellipse cx="97" cy="191" rx="7" ry="10" fill="#b07040" />
-                    <ellipse cx="203" cy="191" rx="7" ry="10" fill="#b07040" />
-                    <rect x="50" y="352" width="36" height="24" rx="3" fill="#2563eb" transform="rotate(-18 68 364)" />
-                    <rect x="54" y="355" width="17" height="24" rx="2" fill="#1e40af" transform="rotate(-18 62 367)" />
-                    <text x="232" y="62" fontSize="22" fill="rgba(245,158,11,0.95)">⭐</text>
-                    <text x="18" y="285" fontSize="16" fill="rgba(245,158,11,0.7)">✨</text>
-                    <text x="215" y="310" fontSize="14" fill="rgba(255,255,255,0.4)">🌍</text>
-                  </svg>
+                <div className="bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-slate-800 dark:to-slate-900 aspect-[4/5] flex flex-col items-center justify-end relative overflow-hidden">
+                  <Image 
+                    src="/trainer.jpg"
+                    alt="Abhishek Bansal — Founder & Trainer"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    priority
+                  />
                 </div>
               </div>
               <motion.div animate={{ y: [-4, 4, -4] }} transition={{ duration: 3, repeat: Infinity }} className="absolute -top-4 -right-4 bg-amber-500 text-white text-xs font-bold px-3 py-2 rounded-2xl shadow-lg">🌟 Top Rated Trainer</motion.div>
